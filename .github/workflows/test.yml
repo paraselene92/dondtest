@@ -13,14 +13,14 @@ jobs:
     steps:
       - name: echo test
         run: echo "test"
-      - name: docker test
-        run: docker ps -a
+      - name: docker image test
+        run: docker image ls
       - name: docker pull test
         run: docker pull docker
       - name: docker pull test2
-        run: docker pull paraselene92/archlinux
-      - name: docker ps -a
-        run: docker ps -a
+        run: docker pull archlinux
+      - name: docker image test
+        run: docker image ls
 #       - name: dond test
 #         run: docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker sh
 #       - name: dond docker test
