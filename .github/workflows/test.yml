@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: echo test
         run: echo "test"
+      - name: echo pwd
+        run: pwd
       - name: file
         run: ls -la
       - name: docker image test
