@@ -18,7 +18,7 @@ jobs:
       - name: docker pull test
         run: docker pull docker
       - name: docker pull test2
-        run: docker pull paraselene92:archlinux
+        run: docker pull paraselene92/archlinux
       - name: docker ps -a
         run: docker ps -a
 #       - name: dond test
