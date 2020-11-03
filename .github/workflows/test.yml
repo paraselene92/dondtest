@@ -11,8 +11,11 @@ jobs:
   dond-test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: echo test
         run: echo "test"
+      - name: echo pwd
+        run: pwd
       - name: file
         run: ls -la
       - name: docker image test
@@ -25,8 +28,10 @@ jobs:
         run: docker image ls
 #       - name: dond test
 #         run: docker run -v /var/run/docker.sock:/var/run/docker.sock docker ls -l
+      - name: dond test
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock docker pwd
       - name: dond test2
-        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux ./test.sh
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock -v /home/runner/work/dondtest/dondtest/test.sh:/test.sh archlinux ./test.sh
       - name: dond docker test
         run: docker ps -a
 
