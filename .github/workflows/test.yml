@@ -31,7 +31,7 @@ jobs:
       - name: dond test
         run: docker run -v /var/run/docker.sock:/var/run/docker.sock docker pwd
       - name: dond test2
-        run: docker run -v /var/run/docker.sock:/var/run/docker.sock -v /home/runner/work/dondtest/dondtest/test.sh:/home/runner/test.sh archlinux ./test.sh
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock -v /home/runner/work/dondtest/dondtest/test.sh:/test.sh archlinux ./test.sh
       - name: dond docker test
         run: docker ps -a
 
