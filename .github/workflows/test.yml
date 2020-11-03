@@ -26,7 +26,7 @@ jobs:
       - name: dond test2
         run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux ls -l
       - name: dond test3
-        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux pacman -S python
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux pacman -S jq
       - name: dond docker test
         run: docker ps -a
 
