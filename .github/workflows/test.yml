@@ -18,5 +18,5 @@ jobs:
       - name: dond test
         run: docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker sh
       - name: dond docker test
-        name: docker ps -a
+        run: docker ps -a
 
