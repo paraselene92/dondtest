@@ -21,8 +21,8 @@ jobs:
         run: docker pull archlinux
       - name: docker image test
         run: docker image ls
-#       - name: dond test
-#         run: docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker sh
-#       - name: dond docker test
-#         run: docker ps -a
+      - name: dond test
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock docker sh
+      - name: dond docker test
+        run: docker ps -a
 
