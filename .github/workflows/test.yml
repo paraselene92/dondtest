@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: echo test
         run: echo "test"
+      - name: file
+        run: ls -l
       - name: docker image test
         run: docker image ls
 #       - name: docker pull test
@@ -24,9 +26,7 @@ jobs:
 #       - name: dond test
 #         run: docker run -v /var/run/docker.sock:/var/run/docker.sock docker ls -l
       - name: dond test2
-        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux ls -l
-      - name: dond test3
-        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux pacman -Syu --noconfirm
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock archlinux ./test.sh
       - name: dond docker test
         run: docker ps -a
 
