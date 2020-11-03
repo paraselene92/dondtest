@@ -1,0 +1,22 @@
+---
+
+name: dond-test
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  dond-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo test
+        run: echo "test"
+      - name: docker test
+        run: docker ps -a
+      - name: dond test
+        run: docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker sh
+      - name: dond docker test
+        name: docker ps -a
+
